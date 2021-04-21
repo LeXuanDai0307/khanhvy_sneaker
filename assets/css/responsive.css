@@ -1,0 +1,54 @@
+/* Mobile and Tablet */
+@media (min-width: 1025px) {
+    .header__navbar-simplify {
+        display: none;
+    }
+    .method__search-simplify {
+        display: none;
+    }
+}
+    
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px) {
+    .header__navbar {
+        display: none;
+    }
+    .header__sales {
+        padding: 8px;
+        height: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .header__nav-header {
+        display: none;
+    }
+    .method__logo {
+        text-align: center;
+    }
+    .header__navbar {
+        display: none;
+    }
+    .header__sales {
+        height: auto;
+        padding: 8px;
+    }
+
+    .header__sales-content {
+        width: 50%;
+    }
+
+    .sales__btn-buy {
+        margin: 0;
+    }
+
+    .sales__btn-close {
+        margin: 0;
+    }
+
+    .method__search-simplify {
+        margin: 1.6rem;
+    }
+
+}

@@ -1,0 +1,359 @@
+.app {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    background-color: var(--background-default);
+}
+
+/* CSS navbar-header */
+.header {
+    background-color: white;
+}
+
+.nav-header__list,.header__nav-header,.nav-header__contact {
+    display: flex;
+}
+
+.header__nav-header {
+    justify-content: space-between;
+    height: 4.2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-header__list, .nav-header__contact {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-header__list {
+    padding-left: calc((100% - 1200px) / 2);
+}
+
+.nav-header__contact {
+    padding-right: calc((100% - 1200px) / 2);
+    margin: auto 0;
+}
+
+.nav-header__item{
+    padding: 0 1rem;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.nav-header__item:first-child {
+    padding-left: 0;
+    cursor: default;
+}
+
+.nav-header__item:last-child {
+    border: none;
+}
+
+.nav-header__contact-icon > a > img {
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-top: 4px;
+    margin-left: 4px;
+
+    cursor: pointer;
+}
+
+/* CSS Header__method */
+.header__method {
+    height: 12rem;
+}
+
+.method__logo > img {
+    width: auto;
+    height: 12rem;
+}
+
+.search-trends__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+}
+
+.search-trends__item {
+    margin: 0 0.5rem;
+    opacity: 0.8;
+}
+
+.search-trends__item:hover {
+    cursor: pointer;
+}
+
+.search-trends__item:first-child {
+    opacity: 1;
+    font-weight: 500;
+    cursor: default;
+}
+
+.method__search-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 4.6rem;
+    border: 1px solid var(--text-color);
+    width: 90%;
+}
+
+.method__search-form > input {
+    outline: none;
+    border: none;
+    width: 80%;
+    padding-left: 1.6rem;
+}
+
+.search-form__button {
+    width: 15%;
+    outline: none;
+    border: none;
+    background-color: var(--text-color);
+    color: white;
+    font-size: 1.4rem;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.search-form__button::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 15%;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
+    z-index: 1;
+
+}
+
+.method__login-signup, .method__cart {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.method__login-signup-icon, .method__cart-icon {
+    font-size: 3rem;
+    padding-bottom: 1.4rem;
+    opacity: 0.8;
+} 
+
+.method__login-signup-content > span {
+    opacity: 0.8;
+}
+
+.method__cart-content > span {
+    opacity: 0.8;
+}
+
+.method__login-signup-content > span:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.method__cart-content > span:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* CSS navbar */
+.header__navbar {
+    bottom: 0;
+    background-color: var(--text-color);
+    color: white;
+    border: 1px dashed white;
+}
+
+.header__navbar-wrapper > .row {
+    height: 6rem;
+}
+
+.navbar__list {
+    display: flex !important;
+    justify-content:flex-start;
+    margin: auto;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__item {
+    padding: 1.2rem;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+
+.navbar__item > i {
+    padding-left: 8px;
+}
+
+.navbar__item:first-child {
+    padding-left: 0;
+}
+
+.navbar__item:last-child {
+    border-right: none;
+}
+
+.navbar__hotline {
+    margin: auto;
+    font-size: 1.6rem;
+
+    display: flex !important;
+    justify-content: center;
+    
+}
+
+.navbar__hotline > span {
+    display: block;
+    margin: auto 0;
+}
+
+.navbar__hotline > i {
+    font-size: 1.6rem;
+    color: white;
+
+    padding: 8px;
+}
+
+/* CSS Header Sales */
+.header__sales {
+    height: 4.6rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: calc((100% - 1200px) / 2);
+    
+    background-color: var(--red);
+    color: white;
+}
+
+.sales__btn-buy {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 9.6rem;
+    height: 3rem;
+
+    margin-right: 10rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    color: white;
+    background-color: black;
+}
+
+.sales__btn-close {
+    font-size: 1.6rem;
+    margin-right: 2rem;
+    border: none;
+    outline: none;
+
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+/* CSS Header navbar simplify */
+.header__navbar-simplify {
+    height: 4.6rem;
+    font-size: 1.6rem;
+    padding: 0 3.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    background-color: var(--text-color);
+}
+
+/* CSS Method search simplify */
+.method__search-simplify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 740px;
+    margin: 1.6rem auto;
+}
+
+.search-simplify__form {
+    display: flex;
+    justify-content: space-between;
+    height: 4.6rem;
+    border: 1px solid var(--text-color);
+    width: 85%;
+}
+
+.search-simplify__form > input {
+    outline: none;
+    border: none;
+    width: 90%;
+    padding-left: 1.6rem;
+}
+
+.search-simplify__button {
+    width: 10%;
+    outline: none;
+    border: none;
+    background-color: var(--text-color);
+    color: white;
+    font-size: 1.4rem;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.method__search-simplify > i {
+    font-size: 2.6rem;
+    color: var(--red);
+}
+
+/* CSS container */
+.container {
+    
+}
+
+.container__marketing {
+    padding-bottom: 3.2rem;
+    margin-top: 3.2rem;
+    background-color: white;
+}
+
+.marketing__carousel > a > img {
+    width: 100%;
+}
+
+.marketing__service {
+    height: 4rem;
+    margin: 0 1.4rem;
+    margin-top: 9.6rem;
+}
+
+.service__item {
+    display: flex !important;
+}
+
+.service__item > img {
+    margin-right: 1.4rem;
+    height: 3.2rem;
+}
+
+.service__item > span {
+    font-size: 1.5rem;
+}
+
+.container__sell-products {
+    margin-top: 20px;
+    background-color: var(--background-default);
+    height: 100px;
+}
