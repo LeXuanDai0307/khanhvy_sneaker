@@ -51,4 +51,17 @@
         margin: 1.6rem;
     }
 
+    .container__marketing {
+        margin: 0 1.6rem;
+        padding-bottom: 0;
+    }
+
+    .marketing__service {
+        margin-top: 0.8rem;
+    }
+
+    .service__item {
+        margin: 1.6rem 0;
+    }
+
 }

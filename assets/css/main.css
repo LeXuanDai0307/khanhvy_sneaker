@@ -320,7 +320,7 @@
 
 /* CSS container */
 .container {
-    
+    background-color: var(--background-default);
 }
 
 .container__marketing {
@@ -334,7 +334,7 @@
 }
 
 .marketing__service {
-    height: 4rem;
+    min-height: 4rem;
     margin: 0 1.4rem;
     margin-top: 9.6rem;
 }
@@ -352,8 +352,100 @@
     font-size: 1.5rem;
 }
 
-.container__sell-products {
-    margin-top: 20px;
+/* Css Selling */
+.container__selling {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 3rem;
     background-color: var(--background-default);
-    height: 100px;
+}
+
+/* Css Selling-Sidebar */
+.selling__sidebar {
+    width: 24%;
+    background-color: var(--background-default);
+}
+
+.sidebar__category, .sidebar__support {
+    background-color: var(--background-white);
+}
+
+.sidebar__support {
+    margin-top: 3rem;
+}
+
+.sidebar__title {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.4rem;
+
+    outline: 1px solid var(--background-dark);
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--background-dark);
+}
+
+.sidebar__title > i {
+    margin-right: 0.8rem;
+}
+
+.sidebar__content {
+   
+}
+
+.category__list, .support__list {
+    padding: 0;
+    list-style: none;
+}
+
+.category__item {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding: 0 1.4rem;
+    border-bottom: 1px dashed var(--background-default);
+    position: relative;
+}
+
+.category__item > i {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+    color: var(--background-default);
+}
+
+.category__item > .category__choice {
+    font-size: 1.8rem;
+    position: absolute;
+    right: 1.4rem;
+    color: var(--background-dark);
+}
+
+.category__item:last-child {
+    border: none;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.support__item {
+    display: flex;
+    align-items: center;
+    
+    height: 5rem;
+    font-size: 1.6rem;
+    padding: 0 1.4rem;
+}
+
+.support__item > i {
+    margin-right: 0.8rem;
+}
+
+.selling__products {
+    width: 73%;
+    background-color: var(--background-white);
 }
