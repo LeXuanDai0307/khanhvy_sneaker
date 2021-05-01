@@ -407,19 +407,26 @@
 .category__item {
     display: flex;
     align-items: center;
+
     height: 5rem;
     padding: 0 1.4rem;
     border-bottom: 1px dashed var(--background-default);
+    
     position: relative;
 }
 
-.category__item > i {
+.category__item > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.category__item >  a > i {
     font-size: 1.8rem;
     margin-right: 0.8rem;
     color: var(--background-default);
 }
 
-.category__item > .category__choice {
+.category__item > a > .category__choice {
     font-size: 1.8rem;
     position: absolute;
     right: 1.4rem;
@@ -445,7 +452,223 @@
     margin-right: 0.8rem;
 }
 
-.selling__products {
+.selling__container {
     width: 73%;
     background-color: var(--background-white);
+}
+
+.selling__banners {
+    margin: 3.2rem 0;
+    overflow: hidden;
+}
+
+.selling__banners > img {
+    width: 100%;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.selling__banners > img:hover {
+    transform: scale(1.1);
+}
+
+/* Css selling products */
+.selling__products-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-top: 2px solid var(--background-dark);
+    border-bottom: 1px solid var(--background-default);
+}
+
+/* Css product card */
+.products__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.products__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--background-default);
+    border-top: none;
+    padding: 5% 0;
+    position: relative;
+}
+
+.products__card > img {
+    width: 80%;
+}
+
+.card__description {
+    width: 80%;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+
+    line-height: 1.8rem;
+    height: 3.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.card__price {
+    margin-top: 0.8rem;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__price-current {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.card__price-old {
+    text-decoration: line-through;
+}
+
+.card__actions {
+    width: 80%;
+    margin-top: 0.8rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.favorite__icon-liked {
+    display: none;
+}
+
+.action__favorite-liked > .favorite__icon-liked {
+    display: inline-block;
+    color: var(--red);
+}
+
+.action__favorite-liked > .favorite__icon-nolike {
+    display: none;
+}
+
+.action__ranking > i {
+    color: var(--background-default);
+}
+
+.action__ranking > .action__ranking--gold {
+    color: yellow;
+}
+
+.card__sale-off {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: white;
+    background-color: var(--red);
+    clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 50%, 0% 0%);
+}
+
+/* Css introduction */
+.containner__introduction {
+    background-color: white;
+    padding: 1.6rem;
+}
+
+.containner__introduction > h1 {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--background-default);
+}
+
+.containner__introduction > p {
+    font-size: 1.5rem;
+    line-height: 3.4rem;
+}
+
+.decription__suggest {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--background-default);
+}
+
+.decription__suggest > p {
+    margin: 0;
+    padding: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 3.4rem;
+}
+
+.decription__suggest > p:last-child {
+    border-left: 1px solid var(--background-default);
+}
+
+.decription__suggest > p > b {
+    font-size: 1.5rem;
+}
+
+/* Css register */
+.container__register {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem;
+    background-color: white;
+    margin-top: 1.4rem;
+}
+
+.register__title {
+    font-size: 1.5rem;
+}
+
+.register__email {
+    width: 40%;
+}
+
+.register__email-form {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid var(--background-dark);
+}
+
+.register__email-form  > input{
+    width: 80%;
+    outline: none;
+    border: none;
+    margin-left: 0.8rem;
+}
+
+.register__email-button {
+    width: 20%;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: var(--background-dark);
+}
+
+/* Css Footer */
+.footer {
+    border-top: 1px solid var(--background-dark);
+    background-color: var(--background-default);
+    padding: 2.4rem;
 }

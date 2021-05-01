@@ -1,9 +1,12 @@
-/* Mobile and Tablet */
+/* Screen */
 @media (min-width: 1025px) {
     .header__navbar-simplify {
         display: none;
     }
     .method__search-simplify {
+        display: none;
+    }
+    .selling__sidebar--mobie {
         display: none;
     }
 }
@@ -17,8 +20,25 @@
         padding: 8px;
         height: auto;
     }
+    .selling__sidebar {
+        display: none;
+    }
+    .container__selling {
+        flex-direction: column;
+    }
+    .selling__container {
+        width: 100%;
+    }
+    .sidebar__category {
+        margin-top: 3rem;
+    }
+    .container__register {
+        flex-direction: column;
+    }
+    .register__email {
+        width: 100%;
+    }
 }
-
 /* Mobile */
 @media (max-width: 739px) {
     .header__nav-header {
@@ -63,5 +83,28 @@
     .service__item {
         margin: 1.6rem 0;
     }
-
+    .selling__sidebar {
+        display: none;
+    }
+    .container__selling {
+        flex-direction: column;
+    }
+    .selling__sidebar--mobie {
+        width: 100%;
+    }
+    .sidebar__category {
+        margin-top: 3rem;
+    }
+    .selling__container {
+        width: 100%;
+    }
+    .card__price {
+        flex-direction: column;
+    }
+    .container__register {
+        flex-direction: column;
+    }
+    .register__email {
+        width: 100%;
+    }
 }
