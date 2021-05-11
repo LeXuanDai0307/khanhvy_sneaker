@@ -130,7 +130,7 @@
     clip-path: polygon(100% 0, 50% 50%, 100% 100%);
     background-color: var(--text-color);
     border: 1px solid var(--text-color);
-    z-index: 1;
+    z-index: 0;
 
 }
 
@@ -139,6 +139,7 @@
     flex-direction: column;
     margin: auto;
     text-align: center;
+    position: relative;
 }
 
 .method__login-signup-icon, .method__cart-icon {
@@ -153,6 +154,26 @@
 
 .method__cart-content > span {
     opacity: 0.8;
+}
+
+.method__cart-numbers {
+    position: absolute;
+    top: -10px;
+    right: 25%;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method__cart-numbers > p {
+   font-size: 1.4rem;
 }
 
 .method__login-signup-content > span:hover {
@@ -189,10 +210,15 @@
 .navbar__item {
     padding: 1.2rem;
     border-right: 1px solid white;
-    cursor: pointer;
+    position: relative;
 }
 
-.navbar__item > i {
+.navbar__item > a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__item > a > i {
     padding-left: 8px;
 }
 
@@ -225,6 +251,47 @@
     padding: 8px;
 }
 
+/* Css Navbar__dropdown-list */
+.navbar__dropdown-list {
+    display: none;
+    list-style: none;
+    text-align: left;
+
+    position: absolute;
+    left: -1px;
+    top: calc(100% + 1.2rem - 2px);
+
+    padding: 0;
+    width: 22rem;
+
+    background-color: var(--background-default);
+    border: 1px solid gray;
+}
+
+.navbar__dropdown-item {
+    padding: 1rem;
+}
+
+.navbar__dropdown-item > a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar__item:hover > .navbar__dropdown-list {
+    display: block;
+}
+
+.navbar__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 22rem;
+    height: 25%;
+    background-color: transparent;
+}
+
 /* CSS Header Sales */
 .header__sales {
     height: 4.6rem;
@@ -241,11 +308,8 @@
 .sales__btn-buy {
     font-size: 1.5rem;
     font-weight: 500;
-    width: 9.6rem;
-    height: 3rem;
 
     margin-right: 10rem;
-    border-radius: 5px;
     border: none;
     cursor: pointer;
 
@@ -256,8 +320,6 @@
 .sales__btn-close {
     font-size: 1.6rem;
     margin-right: 2rem;
-    border: none;
-    outline: none;
 
     background-color: var(--red);
     cursor: pointer;
@@ -630,7 +692,7 @@
 
     padding: 1.6rem;
     background-color: white;
-    margin-top: 1.4rem;
+    margin: 1.4rem 0;
 }
 
 .register__title {
@@ -668,7 +730,186 @@
 
 /* Css Footer */
 .footer {
+    outline: 1.6rem solid var(--background-default);
     border-top: 1px solid var(--background-dark);
     background-color: var(--background-default);
-    padding: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+.footer__main {
+    padding: 1.6rem calc((100% - 1200px)/2);
+}
+
+.footer__contact > img {
+    width: 100%;
+}
+
+.footer__pay-shopee {
+    border-top: 1px solid var(--background-dark);
+}
+
+.footer__copyright {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+
+    color: white;
+    background-color: var(--background-dark);
+    padding: 0 calc((100% - 1200px)/2);
+}
+
+.footer__copyright > p:last-child {
+    border-left: 1px solid var(--text-color);
+    padding-left: 0.8rem;
+}
+
+.footer__copyright > p:first-child {
+    padding-right: 0.8rem;
+}
+
+/* Modal Layout */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    position: relative;
+    width: 500px;
+    min-height: 350px;
+    padding: 1.6rem 3.2rem;
+    border-radius: 5px;
+
+    background-color: var(--background-default);
+    z-index: 1;
+}
+
+/* Css Auth-form login/sign-up */
+
+.modal__login {
+    position: relative;
+}
+
+.auth__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.auth__form-wrapper {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+.auth__form-label {
+    display: inline-flex;
+}
+
+.auth__form-label > p {
+    margin: 0;
+}
+
+.auth__form-label > span {
+    color: var(--red);
+}
+
+.auth__form-wrapper > input {
+    width: 100%;
+    height: 3.6rem;
+}
+
+.auth__support {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth__policy-content, .auth__support-content {
+    font-size: 1.2rem;
+    margin-bottom: 3.6rem;
+}
+
+.auth__support-content > a:first-child {
+    color: var(--red);
+    margin-right: 0.8rem;
+    text-decoration: none;
+}
+
+.auth__support-content > a:last-child {
+    color: var(--text-color);
+    margin-left: 0.8rem;
+    text-decoration: none;
+}
+
+.auth__policy-content > a {
+    color: var(--red);
+}
+
+.auth__button {
+    padding-top: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth__button > .btn-primary {
+    margin-left: 1.6rem;
+}
+
+.auth__social {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-facebook {
+    background-color: #3B5998;
+    color: white;
+    padding: 0.8rem 8%;
+}
+
+.btn-google {
+    background-color: #EA4335;
+    color: white;
+    padding: 0.8rem 8%;
+}
+
+.modal__login-exit {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    z-index: 1;
+    font-size: 3rem;
+}
+
+/* CSS button */
+.btn {
+    min-width: 10rem;
+    min-height: 3rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
 }

@@ -38,7 +38,17 @@
     .register__email {
         width: 100%;
     }
+    .footer__contact > p {
+        display: none;
+    }
+    .footer__support > p {
+        display: none;
+    }
+    .footer__guide > p {
+        display: none;
+    }
 }
+
 /* Mobile */
 @media (max-width: 739px) {
     .header__nav-header {
@@ -106,5 +116,14 @@
     }
     .register__email {
         width: 100%;
+    }
+    .footer__contact > p {
+        display: none;
+    }
+    .footer__support > p {
+        display: none;
+    }
+    .footer__guide > p {
+        display: none;
     }
 }
