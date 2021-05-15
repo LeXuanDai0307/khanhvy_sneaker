@@ -61,7 +61,7 @@
                             <i class="far fa-user-circle"></i>
                         </div>
                         <div class="method__login-signup-content">
-                            <span>Đăng nhập</span> / <span>Đăng kí</span>
+                            <a href="#login">Đăng nhập</a> / <a href="#signup">Đăng kí</a>
                         </div>
                     </div>
                     <div class="method__cart col l-1 m-2 c-0">
@@ -138,7 +138,13 @@
             </div>
             <div class="header__navbar-simplify">
                 <i class="fas fa-bars"></i>
-                <i class="fas fa-shopping-cart"></i>
+                <div class="method__cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="method__cart-numbers">
+                        <span>5</span>
+                    </div>
+                </div>
+
             </div>
             <div class="method__search-simplify">
                 <div class="search-simplify__form">
@@ -732,54 +738,10 @@
     </div>
 
     <!-- Modal layout -->
-    <!-- <div class="modal">
+    <div class="modal" id="login">
         <div class="modal__overlay"></div>
+        <a href="#" class="overlay__close"></a>
         <div class="modal__body">
-            <div class="modal__login">
-                <div class="auth__header">
-                    <h2>Đăng ký</h2>
-                    <h4>Đăng nhập</h4>
-                </div>
-                <div class="auth__form">
-                    <div class="auth__form-wrapper">
-                        <div class="auth__form-label"><p>Họ và tên</p><span>*</span></div>
-                        <input type="text">
-                    </div>
-                    <div class="auth__form-wrapper">
-                        <div class="auth__form-label"><p>Email</p><span>*</span></div>
-                        <input type="text">
-                    </div>
-                    <div class="auth__form-wrapper">
-                        <div class="auth__form-label"><p>Số điện thoại</p><span>*</span></div>
-                        <input type="text">
-                    </div>
-                    <div class="auth__form-wrapper">
-                        <div class="auth__form-label"><p>Mật khẩu</p><span>*</span></div>
-                        <input type="password">
-                    </div>
-                </div>
-                <div class="auth__policy">
-                    <p class="auth__policy-content">
-                        Bằng việt đăng ký, bạn đã đồng ý với KhanhVy về
-                        <a href="#">Điều khoản dịch vụ</a> & 
-                        <a href="#">Chính sách bảo mật</a>
-                    </p>
-                </div>
-                <div class="auth__button">
-                    <button class="btn">Quay lại</button>
-                    <button class="btn btn-primary">Đăng ký</button>
-                </div>
-                <div class="auth__social">
-                    <a href="#" class="btn btn-with-icon btn-facebook">
-                        <i class="fab fa-facebook-square"></i>
-                        Liên kết với Facebook
-                    </a>
-                    <a href="#" class="btn btn-with-icon btn-google">
-                        <i class="fab fa-google"></i>
-                        Liên kết với Google
-                    </a>
-                </div>
-            </div>
             <div class="modal__login">
                 <div class="auth__header">
                     <h2>Đăng nhập</h2>
@@ -821,10 +783,72 @@
                 </div>
             </div>
             <div class="modal__login-exit">
-                <i class="fas fa-times"></i>
+                <a href="#"><i class="fas fa-times"></i></a> 
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="modal" id="signup">
+        <div class="modal__overlay"></div>
+        <a href="#" class="overlay__close"></a>
+        <div class="modal__body">
+            <div class="modal__login">
+                <div class="auth__header">
+                    <h2>Đăng ký</h2>
+                    <h4>Đăng nhập</h4>
+                </div>
+                <div class="auth__form">
+                    <div class="auth__form-wrapper">
+                        <div class="auth__form-label">
+                            <p>Họ và tên</p><span>*</span>
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="auth__form-wrapper">
+                        <div class="auth__form-label">
+                            <p>Email</p><span>*</span>
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="auth__form-wrapper">
+                        <div class="auth__form-label">
+                            <p>Số điện thoại</p><span>*</span>
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="auth__form-wrapper">
+                        <div class="auth__form-label">
+                            <p>Mật khẩu</p><span>*</span>
+                        </div>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="auth__policy">
+                    <p class="auth__policy-content">
+                        Bằng việt đăng ký, bạn đã đồng ý với KhanhVy về
+                        <a href="#">Điều khoản dịch vụ</a> &
+                        <a href="#">Chính sách bảo mật</a>
+                    </p>
+                </div>
+                <div class="auth__button">
+                    <button class="btn">Quay lại</button>
+                    <button class="btn btn-primary">Đăng ký</button>
+                </div>
+                <div class="auth__social">
+                    <a href="#" class="btn btn-with-icon btn-facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        Liên kết với Facebook
+                    </a>
+                    <a href="#" class="btn btn-with-icon btn-google">
+                        <i class="fab fa-google"></i>
+                        Liên kết với Google
+                    </a>
+                </div>
+            </div>
+            <div class="modal__login-exit">
+               <a href="#"><i class="fas fa-times"></i></a> 
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer__main">
             <div class="footer__info row">

@@ -148,8 +148,9 @@
     opacity: 0.8;
 } 
 
-.method__login-signup-content > span {
+.method__login-signup-content > a {
     opacity: 0.8;
+    color: var(--text-color);
 }
 
 .method__cart-content > span {
@@ -159,7 +160,7 @@
 .method__cart-numbers {
     position: absolute;
     top: -10px;
-    right: 25%;
+    right: 2rem;
 
     width: 2.5rem;
     height: 2.5rem;
@@ -176,7 +177,7 @@
    font-size: 1.4rem;
 }
 
-.method__login-signup-content > span:hover {
+.method__login-signup-content > a:hover {
     cursor: pointer;
     opacity: 1;
 }
@@ -780,6 +781,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in 0.2s;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal__overlay {
@@ -787,6 +796,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay__close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .modal__body {
@@ -892,8 +907,12 @@
     position: absolute;
     top: -3rem;
     right: 0;
-    z-index: 1;
+    z-index: 100;
     font-size: 3rem;
+}
+
+.modal__login-exit > a{
+    color: var(--red);
 }
 
 /* CSS button */

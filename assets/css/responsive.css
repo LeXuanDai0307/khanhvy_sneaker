@@ -20,6 +20,9 @@
         padding: 8px;
         height: auto;
     }
+    .header__navbar-simplify  > .method__cart{
+        display: none;
+    }
     .selling__sidebar {
         display: none;
     }
@@ -67,6 +70,14 @@
 
     .header__sales-content {
         width: 50%;
+    }
+
+    .method__cart {
+        margin: 0;
+    }
+
+    .method__cart-numbers {
+        right: -2rem;
     }
 
     .sales__btn-buy {
